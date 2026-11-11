@@ -15,7 +15,7 @@ public:
 	void pushBack(T a);
 	bool popBack();
 	T get(int i);
-	bool set(int i, int val);
+	bool set(int i, T val);
 	int size();
 	int capacity();
 	bool isEmpty();
@@ -38,22 +38,36 @@ template <typename T>
 DynArray<T>::DynArray(int c)
 {
 	if (c <= 0)
-		return;
-	arr = new T[c];
-	cap = c;
-	Size = 0;
+	{
+		arr = nullptr;
+		cap = 0;
+		Size = 0;
+	}
+	else
+	{
+		arr = new T[c];
+		cap = c;
+		Size = 0;
+	}
 }
 
 template <typename T>
 DynArray<T>::DynArray(const DynArray<T>& other)
 {
-	if (other.arr == nullptr)
-		return;
-	cap = other.cap;
-	Size = other.Size;
-	arr = new T[cap];
-	for (int i = 0; i < Size; i++)
-		arr[i] = other.arr[i];
+	if (other.arr == nullptr || other.Size == 0)
+	{
+		cap = other.cap;
+		Size = other.Size;
+		arr = (cap > 0) ? new T[cap] : nullptr;
+	}
+	else
+	{
+		cap = other.cap;
+		Size = other.Size;
+		arr = new T[cap];
+		for (int i = 0; i < Size; i++)
+			arr[i] = other.arr[i];
+	}
 }
 
 
@@ -61,13 +75,23 @@ DynArray<T>::DynArray(const DynArray<T>& other)
 template <typename T>
 DynArray<T>&  DynArray<T>::operator=(const DynArray<T>& other)
 {
-	if (other.arr == nullptr)
-		return;
-	cap = other.cap;
+	if (this == other)
+		return *this;
+
+	if (arr != nullptr)
+		delete[] arr;
+	arr = nullptr;
 	Size = other.Size;
-	arr = new T[cap];
-	for (int i = 0; i < Size; i++)
-		arr[i] = other.arr[i];
+	cap = other.cap;
+	if (other.arr == nullptr)
+		return *this;
+	else
+	{
+		arr = new T[cap];
+		for (int i = 0; i < Size; i++)
+			arr[i] = other.arr[i];
+	}
+	return *this;
 }
 
 
@@ -88,13 +112,16 @@ template <typename T>
 void DynArray<T>::pushBack(T a)
 {
 	//getting arr cap ready for insertion
-	if (size == cap)
+	if (Size == cap)
 	{
+		if (cap == 0)
+			cap++;
 		cap *= 2;
 		T* temp = new T[cap];
 		for (int i = 0; i < Size; i++)
 			temp[i] = arr[i];
-		delete[] arr;
+		if (arr != nullptr)
+			delete[] arr;
 		arr = temp;
 		temp = nullptr;
 	}
@@ -107,21 +134,25 @@ void DynArray<T>::pushBack(T a)
 template <typename T>
 bool DynArray<T>::popBack()
 {
-	size--;
+	if (arr == nullptr || Size == 0)
+		return false;
+	Size--;
+	return true;
 }
 
 //Getters and Setter
 template <typename T>
 T DynArray<T>::get(int i)
 {
+	T x;
 	if (i < 0 || i >= Size)
-		return arr[0];
+		return x;
 
 	return arr[i];
 }
 
 template <typename T>
-bool DynArray<T>::set(int i, int val)
+bool DynArray<T>::set(int i, T val)
 {
 	if (i < 0 || i >= Size)
 		return false;
@@ -137,7 +168,7 @@ template <typename T>
 int DynArray<T>::capacity() { return cap; }
 
 template <typename T>
-bool DynArray<T>::isEmpty() { return (arr == nullptr) ? true : false; }
+bool DynArray<T>::isEmpty() { return (Size == 0) ? true : false; }
 
 template <typename T>
 void DynArray<T>::clear() { Size = 0; }
