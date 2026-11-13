@@ -1,11 +1,14 @@
 #include <iostream>
-#include "VaultHeist/include/containers/Stack.h"
-#include "VaultHeist/include/containers/Queue.h"
 
 using namespace std;
 
+void testDynArray();
+void testStack();
+void testQueue();
 int main()
 {
-
+	testDynArray();
+	testStack();
+	testQueue();
 	return 0;
 }

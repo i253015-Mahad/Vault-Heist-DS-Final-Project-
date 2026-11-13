@@ -45,7 +45,7 @@ void Queue<Q>::enqueue(Q a)
 	if (front == -1 && rear == -1)
 		front++;
 
-	if (rear == cap)
+	if (rear == cap-1)
 	{
 		cap *= 2;
 		Q* t = new Q[cap];
@@ -71,7 +71,9 @@ bool Queue<Q>::dequeue()
 		return true;
 	}
 
-	front++;
+	for (int i = front; i < rear; i++)
+		arr[i] = arr[i + 1];
+	rear--;
 	return true;
 }
 
@@ -83,7 +85,7 @@ Q Queue<Q>::Front()
 	if (front != -1 && arr != nullptr)
 		return arr[front];
 
-	Q x;
+	Q x = 0;
 	return x;
 }
 
@@ -100,5 +102,5 @@ int Queue<Q>::size()
 {
 	if (front == -1 && rear == -1 || arr == nullptr)
 		return 0;
-	return rear - front;
+	return rear - front + 1;
 }

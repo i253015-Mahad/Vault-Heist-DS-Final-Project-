@@ -1,3 +1,4 @@
+
 template <typename T>
 
 class DynArray {
@@ -75,7 +76,7 @@ DynArray<T>::DynArray(const DynArray<T>& other)
 template <typename T>
 DynArray<T>&  DynArray<T>::operator=(const DynArray<T>& other)
 {
-	if (this == other)
+	if (this->arr == other.arr)
 		return *this;
 
 	if (arr != nullptr)
@@ -144,7 +145,7 @@ bool DynArray<T>::popBack()
 template <typename T>
 T DynArray<T>::get(int i)
 {
-	T x;
+	T x = 0;
 	if (i < 0 || i >= Size)
 		return x;
 
