@@ -1,0 +1,29 @@
+
+# Visual Studio project files (keep locally)
+DS_Final_Project.vcxproj
+DS_Final_Project.vcxproj.filters
+DS_Final_Project.vcxproj.user
+
+# Visual Studio generated files
+.vs/
+Debug/
+Release/
+x64/
+x86/
+ipch/
+*.suo
+*.user
+*.sdf
+*.VC.db
+*.VC.VC.opendb
+
+# Compiled output
+*.exe
+*.obj
+*.pdb
+*.ilk
+*.pch
+
+# Temporary files
+*.tmp
+*.log
