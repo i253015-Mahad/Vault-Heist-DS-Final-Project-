@@ -1,14 +1,11 @@
 #include <iostream>
+#include "include/game/MainMenu.h"
 
 using namespace std;
 
-void testDynArray();
-void testStack();
-void testQueue();
 int main()
 {
-	testDynArray();
-	testStack();
-	testQueue();
+	MainMenu m;
+	m.startingScreen();
 	return 0;
 }

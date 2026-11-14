@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../../containers/DynArray.h"
+#include "../../include/containers/DynArray.h"
 
 using namespace std;
 
