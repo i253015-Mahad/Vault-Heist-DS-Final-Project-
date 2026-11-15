@@ -81,8 +81,8 @@ void MainMenu::MainScreen()
 							case 0: window.close(); Campaign c; c.CampaignScreen(); break; //campaign
 							case 1: break; //endless
 							case 2: break; //sandbox
-							case 3: break; //leaderBoard
-							case 4: break; //settings
+							case 3: window.close(); LeaderBoard(); break; //leaderBoard
+							case 4: window.close(); Settings(); break; //settings
 							case 5: window.close(); break;
 							}
 				}
@@ -110,6 +110,132 @@ void MainMenu::MainScreen()
 		window.draw(b);
 		for (int i = 0; i < 6; i++)
 			window.draw(op[i]);
+
+		window.display();
+	}
+}
+
+void MainMenu::Settings()
+{
+	RenderWindow window(VideoMode({ 1365, 765 }), "Settings");
+
+	Texture background;
+	if (!background.loadFromFile("VaultHeist/assets/background/settings.jpeg"))
+		return;
+
+	Sprite b(background);
+
+	Texture btn;
+	if (!btn.loadFromFile("VaultHeist/assets/background/settings_back.png"))
+		return;
+
+	Sprite button(btn);
+	button.setScale(Vector2f(0.15, 0.15));
+	button.setPosition(Vector2f(560, 660));
+
+
+	while (window.isOpen())
+	{
+		Vector2i mousepos = Mouse::getPosition(window);
+
+		while (const auto event = window.pollEvent())
+		{
+			if (event->is<Event::Closed>())
+				window.close();
+
+			if (const auto* mouse = event->getIf<Event::MouseButtonPressed>())
+			{
+				if (mouse->button == Mouse::Button::Left)
+				{
+					if (button.getGlobalBounds().contains(
+						window.mapPixelToCoords(mousepos)))
+					{
+						window.close();
+						MainScreen();
+					}
+				}
+			}
+		}
+
+		if (button.getGlobalBounds().contains(
+			window.mapPixelToCoords(mousepos)))
+		{
+			button.setScale(Vector2f(0.16, 0.16));
+			button.setPosition(Vector2f(550, 660));
+		}
+		else
+		{
+			button.setScale(Vector2f(0.15, 0.15));
+			button.setPosition(Vector2f(560, 660));
+		}
+
+		window.clear(Color::Black);
+
+		window.draw(b);
+		window.draw(button);
+
+		window.display();
+	}
+}
+
+void MainMenu::LeaderBoard()
+{
+	RenderWindow window(VideoMode({ 1365, 765 }), "LeaderBoard");
+
+	Texture background;
+	if (!background.loadFromFile("VaultHeist/assets/background/leaderBoard.jpeg"))
+		return;
+
+	Sprite b(background);
+
+	Texture btn;
+	if (!btn.loadFromFile("VaultHeist/assets/background/settings_back.png"))
+		return;
+
+	Sprite button(btn);
+	button.setScale(Vector2f(0.15, 0.15));
+	button.setPosition(Vector2f(560, 660));
+
+
+	while (window.isOpen())
+	{
+		Vector2i mousepos = Mouse::getPosition(window);
+
+		while (const auto event = window.pollEvent())
+		{
+			if (event->is<Event::Closed>())
+				window.close();
+
+			if (const auto* mouse = event->getIf<Event::MouseButtonPressed>())
+			{
+				if (mouse->button == Mouse::Button::Left)
+				{
+					if (button.getGlobalBounds().contains(
+						window.mapPixelToCoords(mousepos)))
+					{
+						window.close();
+						MainScreen();
+					}
+				}
+			}
+		}
+
+		if (button.getGlobalBounds().contains(
+			window.mapPixelToCoords(mousepos)))
+		{
+			button.setScale(Vector2f(0.16, 0.16));
+			button.setPosition(Vector2f(550, 660));
+		}
+		else
+		{
+			button.setScale(Vector2f(0.15, 0.15));
+			button.setPosition(Vector2f(560, 660));
+		}
+
+		window.clear(Color::Black);
+
+		window.draw(b);
+		window.draw(button);
 
 		window.display();
 	}
