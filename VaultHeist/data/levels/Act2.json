@@ -1,0 +1,14 @@
+{
+  "levelId": "2.1",
+  "levelName": "Search Heist",
+  "actId": 2,
+  "dataStructure": "BST",
+  "mission": "Find the target treasure",
+  "description": "Navigate through the vault to locate the required treasure.",
+  "seed": 23456,
+  "targetKey": "46",
+  "hints": [
+    "Smaller values are on the left.",
+    "Larger values are on the right."
+  ]
+}
