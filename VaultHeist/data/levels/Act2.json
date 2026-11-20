@@ -1,181 +1,76 @@
 [
   {
-    "levelId": "2.1",
+    "levelId": 1,
     "levelName": "Search Heist",
     "actId": 2,
     "dataStructure": "BST",
     "mission": "Find the target treasure",
-    "description": "Navigate through the vault to locate the required treasure.",
-    "seed": 23456,
-    "targetKey": "46",
+    "description": "Search for a treasure using BST ordering rules.",
+    "seed": 21345,
+    "stars": 0,
     "hints": [
-      "Smaller values are on the left.",
-      "Larger values are on the right."
+      "Compare the target key with the current room's key.",
+      "Move left if the target is smaller and right if it is larger."
     ]
   },
-
   {
-    "levelId": "2.2",
-    "levelName": "Search Heist",
+    "levelId": 2,
+    "levelName": "Stash Loot",
     "actId": 2,
     "dataStructure": "BST",
-    "mission": "Find the target treasure",
-    "description": "Navigate through the vault to locate the required treasure.",
-    "seed": 23456,
-    "targetKey": "46",
+    "mission": "Store the stolen treasures",
+    "description": "Insert a treasure in its correct BST position.",
+    "seed": 22345,
+    "stars": 0,
     "hints": [
-      "Smaller values are on the left.",
-      "Larger values are on the right."
+      "Start at the root and compare the new key with each visited node.",
+      "Insert the new node at the first available leaf position.",
+      "Duplicate keys are not allowed."
     ]
   },
-
   {
-    "levelId": "2.3",
-    "levelName": "Search Heist",
+    "levelId": 3,
+    "levelName": "Steal and Collapse",
     "actId": 2,
     "dataStructure": "BST",
-    "mission": "Find the target treasure",
-    "description": "Navigate through the vault to locate the required treasure.",
-    "seed": 23456,
-    "targetKey": "46",
+    "mission": "Remove the target treasure",
+    "description": "Delete a node based on its number of children.",
+    "seed": 23345,
+    "stars": 0,
     "hints": [
-      "Smaller values are on the left.",
-      "Larger values are on the right."
+      "A leaf node can be removed directly.",
+      "A node with one child can be replaced by its child.",
+      "For two children, find the inorder successor in the right subtree."
     ]
   },
-
   {
-    "levelId": "2.4",
-    "levelName": "Search Heist",
+    "levelId": 4,
+    "levelName": "Range Raid",
     "actId": 2,
     "dataStructure": "BST",
-    "mission": "Find the target treasure",
-    "description": "Navigate through the vault to locate the required treasure.",
-    "seed": 23456,
-    "targetKey": "46",
+    "mission": "Collect treasures within a given range",
+    "description": "Find treasure values within a specified range [lo, hi].",
+    "seed": 24345,
+    "stars": 0,
     "hints": [
-      "Smaller values are on the left.",
-      "Larger values are on the right."
+      "Only visit nodes whose values could fall within the specified range.",
+      "Skip the left subtree when the current key is smaller than the lower bound.",
+      "Skip the right subtree when the current key is greater than the upper bound."
     ]
   },
-
   {
-    "levelId": "2.5",
-    "levelName": "Search Heist",
+    "levelId": 5,
+    "levelName": "Boss: The Lazy Architect",
     "actId": 2,
     "dataStructure": "BST",
-    "mission": "Find the target treasure",
-    "description": "Navigate through the vault to locate the required treasure.",
-    "seed": 23456,
-    "targetKey": "46",
+    "mission": "Find the treasure before the guards arrive",
+    "description": "Search a degenerated BST before the alarm runs out.",
+    "seed": 25345,
+    "stars": 0,
     "hints": [
-      "Smaller values are on the left.",
-      "Larger values are on the right."
-    ]
-  },
-
-  {
-    "levelId": "2.6",
-    "levelName": "Search Heist",
-    "actId": 2,
-    "dataStructure": "BST",
-    "mission": "Find the target treasure",
-    "description": "Navigate through the vault to locate the required treasure.",
-    "seed": 23456,
-    "targetKey": "46",
-    "hints": [
-      "Smaller values are on the left.",
-      "Larger values are on the right."
-    ]
-  },
-
-  {
-    "levelId": "2.7",
-    "levelName": "Search Heist",
-    "actId": 2,
-    "dataStructure": "BST",
-    "mission": "Find the target treasure",
-    "description": "Navigate through the vault to locate the required treasure.",
-    "seed": 23456,
-    "targetKey": "46",
-    "hints": [
-      "Smaller values are on the left.",
-      "Larger values are on the right."
-    ]
-  },
-
-  {
-    "levelId": "2.8",
-    "levelName": "Search Heist",
-    "actId": 2,
-    "dataStructure": "BST",
-    "mission": "Find the target treasure",
-    "description": "Navigate through the vault to locate the required treasure.",
-    "seed": 23456,
-    "targetKey": "46",
-    "hints": [
-      "Smaller values are on the left.",
-      "Larger values are on the right."
-    ]
-  },
-
-  {
-    "levelId": "2.9",
-    "levelName": "Search Heist",
-    "actId": 2,
-    "dataStructure": "BST",
-    "mission": "Find the target treasure",
-    "description": "Navigate through the vault to locate the required treasure.",
-    "seed": 23456,
-    "targetKey": "46",
-    "hints": [
-      "Smaller values are on the left.",
-      "Larger values are on the right."
-    ]
-  },
-
-  {
-    "levelId": "2.10",
-    "levelName": "Search Heist",
-    "actId": 2,
-    "dataStructure": "BST",
-    "mission": "Find the target treasure",
-    "description": "Navigate through the vault to locate the required treasure.",
-    "seed": 23456,
-    "targetKey": "46",
-    "hints": [
-      "Smaller values are on the left.",
-      "Larger values are on the right."
-    ]
-  },
-
-  {
-    "levelId": "2.11",
-    "levelName": "Search Heist",
-    "actId": 2,
-    "dataStructure": "BST",
-    "mission": "Find the target treasure",
-    "description": "Navigate through the vault to locate the required treasure.",
-    "seed": 23456,
-    "targetKey": "46",
-    "hints": [
-      "Smaller values are on the left.",
-      "Larger values are on the right."
-    ]
-  },
-
-  {
-    "levelId": "2.12",
-    "levelName": "Search Heist",
-    "actId": 2,
-    "dataStructure": "BST",
-    "mission": "Find the target treasure",
-    "description": "Navigate through the vault to locate the required treasure.",
-    "seed": 23456,
-    "targetKey": "46",
-    "hints": [
-      "Smaller values are on the left.",
-      "Larger values are on the right."
+      "Inserting sorted keys creates a right-leaning chain.",
+      "A degenerated BST can have a height equal to its number of nodes.",
+      "Every comparison consumes one alarm step."
     ]
   }
 ]

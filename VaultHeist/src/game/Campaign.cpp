@@ -52,6 +52,16 @@ void Campaign::CampaignScreen()
 	button.setPosition(Vector2f(30, 20));
 
 	bool open[4] = { true, false, false, false };
+	Renderer* r = new Renderer, * curr;
+	for (int i = 1; i < 4; i++)
+	{
+		r = r->parser(r, i);
+		curr = r;
+		for (int j = 0; j < r->levelCounter(i)-1; j++)
+			curr = curr->nlevel;
+		if (curr->stars > 0)
+			open[i] = true;
+	}
 	bool once[4] = { false, false, false, false };
 
 	RectangleShape bound[4];
@@ -149,6 +159,9 @@ void Campaign::CampaignScreen()
 
 		window.display();
 	}
+	delete r;
+	r = nullptr;
+	curr = nullptr;
 }
 
 
@@ -191,6 +204,9 @@ void Campaign::Act1()
 		Renderer* curr = r;
 		for (int j = 0; j < i; j++)
 			curr = curr->nlevel;
+		
+		if (curr->stars > 0)
+			locked[i] = false;
 		if (curr->stars == 1)
 			ls[i].setTexture(level1);
 		else if (curr->stars == 2)
@@ -228,13 +244,7 @@ void Campaign::Act1()
 		for (int j = 0; j < i; j++)
 			curr = curr->nlevel;
 		o = to_string(curr->levelID);
-		a = "";
-		for (int j = 0; j < 3; j++)
-			a += o[j];
-
-		if (i >= 9)
-			a += o[3];
-		lnum[i].setString(a);
+		lnum[i].setString(o);
 	}
 
 	while (window.isOpen())
@@ -296,19 +306,19 @@ void Campaign::Act1()
 				if (i <= 3)
 				{
 					ls[i].setPosition(Vector2f(382 + i * 140, 280));
-					lnum[i].setPosition(Vector2f((449 + i * 140), 320));
+					lnum[i].setPosition(Vector2f((461 + i * 140), 320));
 				}
 				else if (i <= 7)
 				{
 					ls[i].setPosition(Vector2f(-178 + i * 140, 410));
-					lnum[i].setPosition(Vector2f((-112 + i * 140), 450));
+					lnum[i].setPosition(Vector2f((-100 + i * 140), 450));
 				}
 				else
 				{
 					ls[i].setPosition(Vector2f(-738 + i * 140, 540));
-					lnum[i].setPosition(Vector2f((-679 + i * 140), 580));
+					lnum[i].setPosition(Vector2f((-669 + i * 140), 580));
 					if (i == 8)
-						lnum[i].setPosition(Vector2f((-672 + i * 140), 580));
+						lnum[i].setPosition(Vector2f((-660 + i * 140), 580));
 				}
 			}
 			else
@@ -318,19 +328,19 @@ void Campaign::Act1()
 				if (i <= 3)
 				{
 					ls[i].setPosition(Vector2f(390 + i * 140, 280));
-				    lnum[i].setPosition(Vector2f((453 + i * 140), 320));
+				    lnum[i].setPosition(Vector2f((465 + i * 140), 320));
 				}
 				else if (i <= 7)
 				{
 					ls[i].setPosition(Vector2f(-170 + i * 140, 410));
-					lnum[i].setPosition(Vector2f((-107 + i * 140), 450));
+					lnum[i].setPosition(Vector2f((-97 + i * 140), 450));
 				}
 				else
 				{
 					ls[i].setPosition(Vector2f(-730 + i * 140, 540));
-					lnum[i].setPosition(Vector2f((-675 + i * 140), 580));
+					lnum[i].setPosition(Vector2f((-665 + i * 140), 580));
 					if (i == 8)
-						lnum[i].setPosition(Vector2f((-668 + i * 140), 580));
+						lnum[i].setPosition(Vector2f((-658 + i * 140), 580));
 				}
 			}
 		}
@@ -391,6 +401,9 @@ void Campaign::Act2()
 		Renderer* curr = r;
 		for (int j = 0; j < i; j++)
 			curr = curr->nlevel;
+		
+		if (curr->stars > 0)
+			locked[i] = false;
 		if (curr->stars == 1)
 			ls[i].setTexture(level1);
 		else if (curr->stars == 2)
@@ -428,13 +441,7 @@ void Campaign::Act2()
 		for (int j = 0; j < i; j++)
 			curr = curr->nlevel;
 		o = to_string(curr->levelID);
-		a = "";
-		for (int j = 0; j < 3; j++)
-			a += o[j];
-
-		if (i >= 9)
-			a += o[3];
-		lnum[i].setString(a);
+		lnum[i].setString(o);
 	}
 
 	while (window.isOpen())
@@ -496,19 +503,19 @@ void Campaign::Act2()
 				if (i <= 3)
 				{
 					ls[i].setPosition(Vector2f(382 + i * 140, 280));
-					lnum[i].setPosition(Vector2f((449 + i * 140), 320));
+					lnum[i].setPosition(Vector2f((461 + i * 140), 320));
 				}
 				else if (i <= 7)
 				{
 					ls[i].setPosition(Vector2f(-178 + i * 140, 410));
-					lnum[i].setPosition(Vector2f((-112 + i * 140), 450));
+					lnum[i].setPosition(Vector2f((-100 + i * 140), 450));
 				}
 				else
 				{
 					ls[i].setPosition(Vector2f(-738 + i * 140, 540));
-					lnum[i].setPosition(Vector2f((-679 + i * 140), 580));
+					lnum[i].setPosition(Vector2f((-669 + i * 140), 580));
 					if (i == 8)
-						lnum[i].setPosition(Vector2f((-672 + i * 140), 580));
+						lnum[i].setPosition(Vector2f((-660 + i * 140), 580));
 				}
 			}
 			else
@@ -518,19 +525,19 @@ void Campaign::Act2()
 				if (i <= 3)
 				{
 					ls[i].setPosition(Vector2f(390 + i * 140, 280));
-					lnum[i].setPosition(Vector2f((453 + i * 140), 320));
+					lnum[i].setPosition(Vector2f((463 + i * 140), 320));
 				}
 				else if (i <= 7)
 				{
 					ls[i].setPosition(Vector2f(-170 + i * 140, 410));
-					lnum[i].setPosition(Vector2f((-107 + i * 140), 450));
+					lnum[i].setPosition(Vector2f((-97 + i * 140), 450));
 				}
 				else
 				{
 					ls[i].setPosition(Vector2f(-730 + i * 140, 540));
-					lnum[i].setPosition(Vector2f((-675 + i * 140), 580));
+					lnum[i].setPosition(Vector2f((-665 + i * 140), 580));
 					if (i == 8)
-						lnum[i].setPosition(Vector2f((-668 + i * 140), 580));
+						lnum[i].setPosition(Vector2f((-658 + i * 140), 580));
 				}
 			}
 		}
@@ -593,6 +600,9 @@ void Campaign::Act3()
 		Renderer* curr = r;
 		for (int j = 0; j < i; j++)
 			curr = curr->nlevel;
+		
+		if (curr->stars > 0)
+			locked[i] = false;
 		if (curr->stars == 1)
 			ls[i].setTexture(level1);
 		else if (curr->stars == 2)
@@ -630,13 +640,7 @@ void Campaign::Act3()
 		for (int j = 0; j < i; j++)
 			curr = curr->nlevel;
 		o = to_string(curr->levelID);
-		a = "";
-		for (int j = 0; j < 3; j++)
-			a += o[j];
-
-		if (i >= 9)
-			a += o[3];
-		lnum[i].setString(a);
+		lnum[i].setString(o);
 	}
 
 	while (window.isOpen())
@@ -698,19 +702,19 @@ void Campaign::Act3()
 				if (i <= 3)
 				{
 					ls[i].setPosition(Vector2f(382 + i * 140, 280));
-					lnum[i].setPosition(Vector2f((449 + i * 140), 320));
+					lnum[i].setPosition(Vector2f((461 + i * 140), 320));
 				}
 				else if (i <= 7)
 				{
 					ls[i].setPosition(Vector2f(-178 + i * 140, 410));
-					lnum[i].setPosition(Vector2f((-112 + i * 140), 450));
+					lnum[i].setPosition(Vector2f((-100 + i * 140), 450));
 				}
 				else
 				{
 					ls[i].setPosition(Vector2f(-738 + i * 140, 540));
-					lnum[i].setPosition(Vector2f((-679 + i * 140), 580));
+					lnum[i].setPosition(Vector2f((-669 + i * 140), 580));
 					if (i == 8)
-						lnum[i].setPosition(Vector2f((-672 + i * 140), 580));
+						lnum[i].setPosition(Vector2f((-660 + i * 140), 580));
 				}
 			}
 			else
@@ -720,19 +724,19 @@ void Campaign::Act3()
 				if (i <= 3)
 				{
 					ls[i].setPosition(Vector2f(390 + i * 140, 280));
-					lnum[i].setPosition(Vector2f((453 + i * 140), 320));
+					lnum[i].setPosition(Vector2f((463 + i * 140), 320));
 				}
 				else if (i <= 7)
 				{
 					ls[i].setPosition(Vector2f(-170 + i * 140, 410));
-					lnum[i].setPosition(Vector2f((-107 + i * 140), 450));
+					lnum[i].setPosition(Vector2f((-97 + i * 140), 450));
 				}
 				else
 				{
 					ls[i].setPosition(Vector2f(-730 + i * 140, 540));
-					lnum[i].setPosition(Vector2f((-675 + i * 140), 580));
+					lnum[i].setPosition(Vector2f((-665 + i * 140), 580));
 					if (i == 8)
-						lnum[i].setPosition(Vector2f((-668 + i * 140), 580));
+						lnum[i].setPosition(Vector2f((-658 + i * 140), 580));
 				}
 			}
 		}
@@ -795,6 +799,9 @@ void Campaign::Act4()
 		Renderer* curr = r;
 		for (int j = 0; j < i; j++)
 			curr = curr->nlevel;
+	
+		if (curr->stars > 0)
+			locked[i] = false;
 		if (curr->stars == 1)
 			ls[i].setTexture(level1);
 		else if (curr->stars == 2)
@@ -832,13 +839,7 @@ void Campaign::Act4()
 		for (int j = 0; j < i; j++)
 			curr = curr->nlevel;
 		o = to_string(curr->levelID);
-		a = "";
-		for (int j = 0; j < 3; j++)
-			a += o[j];
-
-		if (i >= 9)
-			a += o[3];
-		lnum[i].setString(a);
+		lnum[i].setString(o);
 	}
 
 	while (window.isOpen())
@@ -900,19 +901,19 @@ void Campaign::Act4()
 				if (i <= 3)
 				{
 					ls[i].setPosition(Vector2f(380 + i * 140, 230));
-					lnum[i].setPosition(Vector2f((446 + i * 140), 270));
+					lnum[i].setPosition(Vector2f((458 + i * 140), 270));
 				}
 				else if (i <= 7)
 				{
 					ls[i].setPosition(Vector2f(-180 + i * 140, 355));
-					lnum[i].setPosition(Vector2f((-112 + i * 140), 400));
+					lnum[i].setPosition(Vector2f((-100 + i * 140), 400));
 				}
 				else
 				{
 					ls[i].setPosition(Vector2f(-740 + i * 140, 480));
-					lnum[i].setPosition(Vector2f((-679 + i * 140), 520));
+					lnum[i].setPosition(Vector2f((-669 + i * 140), 520));
 					if (i == 8)
-						lnum[i].setPosition(Vector2f((-669 + i * 140), 520));
+						lnum[i].setPosition(Vector2f((-657 + i * 140), 520));
 				}
 			}
 			else
@@ -922,19 +923,19 @@ void Campaign::Act4()
 				if (i <= 3)
 				{
 					ls[i].setPosition(Vector2f(385 + i * 140, 230));
-					lnum[i].setPosition(Vector2f((447 + i * 140), 270));
+					lnum[i].setPosition(Vector2f((457 + i * 140), 270));
 				}
 				else if (i <= 7)
 				{
 					ls[i].setPosition(Vector2f(-175 + i * 140, 355));
-					lnum[i].setPosition(Vector2f((-113 + i * 140), 400));
+					lnum[i].setPosition(Vector2f((-103 + i * 140), 400));
 				}
 				else
 				{
 					ls[i].setPosition(Vector2f(-735 + i * 140, 480));
-					lnum[i].setPosition(Vector2f((-680 + i * 140), 520));
+					lnum[i].setPosition(Vector2f((-670 + i * 140), 520));
 					if (i == 8)
-						lnum[i].setPosition(Vector2f((-670 + i * 140), 520));
+						lnum[i].setPosition(Vector2f((-660 + i * 140), 520));
 				}
 			}
 		}

@@ -5,7 +5,7 @@ using namespace std;
 
 class Renderer {
 public:
-	float levelID;
+	int levelID;
 	string levelName;
 	int actID;
 	string structure;
@@ -25,4 +25,5 @@ public:
 	Renderer* parser(Renderer* h, int act);
 	int levelCounter(int act);
 	void display(Renderer* h);
+	void updateStar(Renderer* c, int act, int ns);
 };
