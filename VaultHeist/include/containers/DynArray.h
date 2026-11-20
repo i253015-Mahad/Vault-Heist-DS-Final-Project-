@@ -1,3 +1,7 @@
+#pragma once
+#include <iostream>
+
+using namespace std;
 
 template <typename T>
 
@@ -21,9 +25,17 @@ public:
 	int capacity();
 	bool isEmpty();
 	void clear();
+	void display();
 };
 
 //implementation
+
+template <typename T>
+void DynArray<T>::display()
+{
+	for (int i = 0; i < Size; i++)
+		cout << arr[i] << endl;
+}
 
 
 //Constructors

@@ -1,0 +1,181 @@
+[
+  {
+    "levelId": "2.1",
+    "levelName": "Search Heist",
+    "actId": 2,
+    "dataStructure": "BST",
+    "mission": "Find the target treasure",
+    "description": "Navigate through the vault to locate the required treasure.",
+    "seed": 23456,
+    "targetKey": "46",
+    "hints": [
+      "Smaller values are on the left.",
+      "Larger values are on the right."
+    ]
+  },
+
+  {
+    "levelId": "2.2",
+    "levelName": "Search Heist",
+    "actId": 2,
+    "dataStructure": "BST",
+    "mission": "Find the target treasure",
+    "description": "Navigate through the vault to locate the required treasure.",
+    "seed": 23456,
+    "targetKey": "46",
+    "hints": [
+      "Smaller values are on the left.",
+      "Larger values are on the right."
+    ]
+  },
+
+  {
+    "levelId": "2.3",
+    "levelName": "Search Heist",
+    "actId": 2,
+    "dataStructure": "BST",
+    "mission": "Find the target treasure",
+    "description": "Navigate through the vault to locate the required treasure.",
+    "seed": 23456,
+    "targetKey": "46",
+    "hints": [
+      "Smaller values are on the left.",
+      "Larger values are on the right."
+    ]
+  },
+
+  {
+    "levelId": "2.4",
+    "levelName": "Search Heist",
+    "actId": 2,
+    "dataStructure": "BST",
+    "mission": "Find the target treasure",
+    "description": "Navigate through the vault to locate the required treasure.",
+    "seed": 23456,
+    "targetKey": "46",
+    "hints": [
+      "Smaller values are on the left.",
+      "Larger values are on the right."
+    ]
+  },
+
+  {
+    "levelId": "2.5",
+    "levelName": "Search Heist",
+    "actId": 2,
+    "dataStructure": "BST",
+    "mission": "Find the target treasure",
+    "description": "Navigate through the vault to locate the required treasure.",
+    "seed": 23456,
+    "targetKey": "46",
+    "hints": [
+      "Smaller values are on the left.",
+      "Larger values are on the right."
+    ]
+  },
+
+  {
+    "levelId": "2.6",
+    "levelName": "Search Heist",
+    "actId": 2,
+    "dataStructure": "BST",
+    "mission": "Find the target treasure",
+    "description": "Navigate through the vault to locate the required treasure.",
+    "seed": 23456,
+    "targetKey": "46",
+    "hints": [
+      "Smaller values are on the left.",
+      "Larger values are on the right."
+    ]
+  },
+
+  {
+    "levelId": "2.7",
+    "levelName": "Search Heist",
+    "actId": 2,
+    "dataStructure": "BST",
+    "mission": "Find the target treasure",
+    "description": "Navigate through the vault to locate the required treasure.",
+    "seed": 23456,
+    "targetKey": "46",
+    "hints": [
+      "Smaller values are on the left.",
+      "Larger values are on the right."
+    ]
+  },
+
+  {
+    "levelId": "2.8",
+    "levelName": "Search Heist",
+    "actId": 2,
+    "dataStructure": "BST",
+    "mission": "Find the target treasure",
+    "description": "Navigate through the vault to locate the required treasure.",
+    "seed": 23456,
+    "targetKey": "46",
+    "hints": [
+      "Smaller values are on the left.",
+      "Larger values are on the right."
+    ]
+  },
+
+  {
+    "levelId": "2.9",
+    "levelName": "Search Heist",
+    "actId": 2,
+    "dataStructure": "BST",
+    "mission": "Find the target treasure",
+    "description": "Navigate through the vault to locate the required treasure.",
+    "seed": 23456,
+    "targetKey": "46",
+    "hints": [
+      "Smaller values are on the left.",
+      "Larger values are on the right."
+    ]
+  },
+
+  {
+    "levelId": "2.10",
+    "levelName": "Search Heist",
+    "actId": 2,
+    "dataStructure": "BST",
+    "mission": "Find the target treasure",
+    "description": "Navigate through the vault to locate the required treasure.",
+    "seed": 23456,
+    "targetKey": "46",
+    "hints": [
+      "Smaller values are on the left.",
+      "Larger values are on the right."
+    ]
+  },
+
+  {
+    "levelId": "2.11",
+    "levelName": "Search Heist",
+    "actId": 2,
+    "dataStructure": "BST",
+    "mission": "Find the target treasure",
+    "description": "Navigate through the vault to locate the required treasure.",
+    "seed": 23456,
+    "targetKey": "46",
+    "hints": [
+      "Smaller values are on the left.",
+      "Larger values are on the right."
+    ]
+  },
+
+  {
+    "levelId": "2.12",
+    "levelName": "Search Heist",
+    "actId": 2,
+    "dataStructure": "BST",
+    "mission": "Find the target treasure",
+    "description": "Navigate through the vault to locate the required treasure.",
+    "seed": 23456,
+    "targetKey": "46",
+    "hints": [
+      "Smaller values are on the left.",
+      "Larger values are on the right."
+    ]
+  }
+]

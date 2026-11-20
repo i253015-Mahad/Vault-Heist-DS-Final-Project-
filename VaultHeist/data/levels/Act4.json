@@ -1,0 +1,169 @@
+[
+  {
+    "levelId": "4.1",
+    "levelName": "Activate the Vault",
+    "actId": 4,
+    "dataStructure": "MaxHeap",
+    "mission": "Organise the treasures",
+    "description": "Arrange the treasures to satisfy the Max Heap property.",
+    "seed": 45678,
+    "hints": [
+      "The parent must be greater than or equal to its children.",
+      "Start from the last non-leaf node."
+    ]
+  },
+
+  {
+    "levelId": "4.2",
+    "levelName": "Activate the Vault",
+    "actId": 4,
+    "dataStructure": "MaxHeap",
+    "mission": "Organise the treasures",
+    "description": "Arrange the treasures to satisfy the Max Heap property.",
+    "seed": 45678,
+    "hints": [
+      "The parent must be greater than or equal to its children.",
+      "Start from the last non-leaf node."
+    ]
+  },
+
+  {
+    "levelId": "4.3",
+    "levelName": "Activate the Vault",
+    "actId": 4,
+    "dataStructure": "MaxHeap",
+    "mission": "Organise the treasures",
+    "description": "Arrange the treasures to satisfy the Max Heap property.",
+    "seed": 45678,
+    "hints": [
+      "The parent must be greater than or equal to its children.",
+      "Start from the last non-leaf node."
+    ]
+  },
+
+  {
+    "levelId": "4.4",
+    "levelName": "Activate the Vault",
+    "actId": 4,
+    "dataStructure": "MaxHeap",
+    "mission": "Organise the treasures",
+    "description": "Arrange the treasures to satisfy the Max Heap property.",
+    "seed": 45678,
+    "hints": [
+      "The parent must be greater than or equal to its children.",
+      "Start from the last non-leaf node."
+    ]
+  },
+
+  {
+    "levelId": "4.5",
+    "levelName": "Activate the Vault",
+    "actId": 4,
+    "dataStructure": "MaxHeap",
+    "mission": "Organise the treasures",
+    "description": "Arrange the treasures to satisfy the Max Heap property.",
+    "seed": 45678,
+    "hints": [
+      "The parent must be greater than or equal to its children.",
+      "Start from the last non-leaf node."
+    ]
+  },
+
+  {
+    "levelId": "4.6",
+    "levelName": "Activate the Vault",
+    "actId": 4,
+    "dataStructure": "MaxHeap",
+    "mission": "Organise the treasures",
+    "description": "Arrange the treasures to satisfy the Max Heap property.",
+    "seed": 45678,
+    "hints": [
+      "The parent must be greater than or equal to its children.",
+      "Start from the last non-leaf node."
+    ]
+  },
+
+  {
+    "levelId": "4.7",
+    "levelName": "Activate the Vault",
+    "actId": 4,
+    "dataStructure": "MaxHeap",
+    "mission": "Organise the treasures",
+    "description": "Arrange the treasures to satisfy the Max Heap property.",
+    "seed": 45678,
+    "hints": [
+      "The parent must be greater than or equal to its children.",
+      "Start from the last non-leaf node."
+    ]
+  },
+
+  {
+    "levelId": "4.8",
+    "levelName": "Activate the Vault",
+    "actId": 4,
+    "dataStructure": "MaxHeap",
+    "mission": "Organise the treasures",
+    "description": "Arrange the treasures to satisfy the Max Heap property.",
+    "seed": 45678,
+    "hints": [
+      "The parent must be greater than or equal to its children.",
+      "Start from the last non-leaf node."
+    ]
+  },
+
+  {
+    "levelId": "4.9",
+    "levelName": "Activate the Vault",
+    "actId": 4,
+    "dataStructure": "MaxHeap",
+    "mission": "Organise the treasures",
+    "description": "Arrange the treasures to satisfy the Max Heap property.",
+    "seed": 45678,
+    "hints": [
+      "The parent must be greater than or equal to its children.",
+      "Start from the last non-leaf node."
+    ]
+  },
+
+  {
+    "levelId": "4.10",
+    "levelName": "Activate the Vault",
+    "actId": 4,
+    "dataStructure": "MaxHeap",
+    "mission": "Organise the treasures",
+    "description": "Arrange the treasures to satisfy the Max Heap property.",
+    "seed": 45678,
+    "hints": [
+      "The parent must be greater than or equal to its children.",
+      "Start from the last non-leaf node."
+    ]
+  },
+
+  {
+    "levelId": "4.11",
+    "levelName": "Activate the Vault",
+    "actId": 4,
+    "dataStructure": "MaxHeap",
+    "mission": "Organise the treasures",
+    "description": "Arrange the treasures to satisfy the Max Heap property.",
+    "seed": 45678,
+    "hints": [
+      "The parent must be greater than or equal to its children.",
+      "Start from the last non-leaf node."
+    ]
+  },
+
+  {
+    "levelId": "4.12",
+    "levelName": "Activate the Vault",
+    "actId": 4,
+    "dataStructure": "MaxHeap",
+    "mission": "Organise the treasures",
+    "description": "Arrange the treasures to satisfy the Max Heap property.",
+    "seed": 45678,
+    "hints": [
+      "The parent must be greater than or equal to its children.",
+      "Start from the last non-leaf node."
+    ]
+  }
+]
