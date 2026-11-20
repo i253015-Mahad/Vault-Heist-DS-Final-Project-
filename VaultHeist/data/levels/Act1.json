@@ -1,157 +1,72 @@
 [
   {
-    "levelId": "1.1",
+    "levelId": 1,
     "levelName": "Guards Patrol",
     "actId": 1,
     "dataStructure": "BinaryTree",
     "mission": "Predict the guards' patrol route",
     "description": "Identify the order in which guards visit the rooms.",
     "seed": 12345,
+    "stars": 0,
     "hints": [
       "Remember the order in which each traversal visits nodes."
     ]
   },
 
   {
-    "levelId": "1.2",
-    "levelName": "Guard not Patrol",
-    "actId": 1,
-    "dataStructure": "AVLTree",
-    "mission": "Predict the Rotations",
-    "description": "Identify the order in which rotations take place.",
-    "seed": 67890,
-    "hints": [
-      "Remember the balance factors."
-    ]
-  },
-
-  {
-    "levelId": "1.3",
-    "levelName": "Guards Patrol",
+    "levelId": 2,
+    "levelName": "Reconstruct the Vault",
     "actId": 1,
     "dataStructure": "BinaryTree",
-    "mission": "Predict the guards' patrol route",
-    "description": "Identify the order in which guards visit the rooms.",
-    "seed": 12345,
+    "mission": "Reconstruct the hidden vault structure",
+    "description": "Reconstruct the binary tree using the given traversals.",
+    "seed": 23456,
+    "stars": 0,
     "hints": [
-      "Remember the order in which each traversal visits nodes."
+      "Look for the root node in the traversal sequences.",
+      "Use the inorder traversal to separate the left and right subtrees."
     ]
   },
-
   {
-    "levelId": "1.4",
-    "levelName": "Guard not Patrol",
-    "actId": 1,
-    "dataStructure": "AVLTree",
-    "mission": "Predict the Rotations",
-    "description": "Identify the order in which rotations take place.",
-    "seed": 67890,
-    "hints": [
-      "Remember the balance factors."
-    ]
-  },
-
-  {
-    "levelId": "1.5",
-    "levelName": "Guards Patrol",
+    "levelId": 3,
+    "levelName": "Vault Assessment",
     "actId": 1,
     "dataStructure": "BinaryTree",
-    "mission": "Predict the guards' patrol route",
-    "description": "Identify the order in which guards visit the rooms.",
-    "seed": 12345,
+    "mission": "Determine the vault's structural dimensions",
+    "description": "Calculate the height and diameter of the binary tree.",
+    "seed": 34567,
+    "stars": 0,
     "hints": [
-      "Remember the order in which each traversal visits nodes."
+      "Height depends on the longest path from a node to a leaf.",
+      "The diameter is the longest path between any two nodes."
     ]
   },
-
   {
-    "levelId": "1.6",
-    "levelName": "Guard not Patrol",
-    "actId": 1,
-    "dataStructure": "AVLTree",
-    "mission": "Predict the Rotations",
-    "description": "Identify the order in which rotations take place.",
-    "seed": 67890,
-    "hints": [
-      "Remember the balance factors."
-    ]
-  },
-
-  {
-    "levelId": "1.7",
-    "levelName": "Guards Patrol",
+    "levelId": 4,
+    "levelName": "The Secret Connection",
     "actId": 1,
     "dataStructure": "BinaryTree",
-    "mission": "Predict the guards' patrol route",
-    "description": "Identify the order in which guards visit the rooms.",
-    "seed": 12345,
+    "mission": "Find the connection between two important rooms",
+    "description": "Find the common ancestor and path between two nodes.",
+    "seed": 45678,
+    "stars": 0,
     "hints": [
-      "Remember the order in which each traversal visits nodes."
+      "The lowest common ancestor is the deepest node that is an ancestor of both selected nodes.",
+      "Trace the paths from the root to both selected nodes."
     ]
   },
-
   {
-    "levelId": "1.8",
-    "levelName": "Guard not Patrol",
-    "actId": 1,
-    "dataStructure": "AVLTree",
-    "mission": "Predict the Rotations",
-    "description": "Identify the order in which rotations take place.",
-    "seed": 67890,
-    "hints": [
-      "Remember the balance factors."
-    ]
-  },
-
-  {
-    "levelId": "1.9",
-    "levelName": "Guards Patrol",
+    "levelId": 5,
+    "levelName": "Mirror the Vault",
     "actId": 1,
     "dataStructure": "BinaryTree",
-    "mission": "Predict the guards' patrol route",
-    "description": "Identify the order in which guards visit the rooms.",
-    "seed": 12345,
+    "mission": "Unlock the mirrored vault",
+    "description": "Swap all left and right children to mirror the tree.",
+    "seed": 56789,
+    "stars": 0,
     "hints": [
-      "Remember the order in which each traversal visits nodes."
-    ]
-  },
-
-  {
-    "levelId": "1.10",
-    "levelName": "Guard not Patrol",
-    "actId": 1,
-    "dataStructure": "AVLTree",
-    "mission": "Predict the Rotations",
-    "description": "Identify the order in which rotations take place.",
-    "seed": 67890,
-    "hints": [
-      "Remember the balance factors."
-    ]
-  },
-
-  {
-    "levelId": "1.11",
-    "levelName": "Guards Patrol",
-    "actId": 1,
-    "dataStructure": "BinaryTree",
-    "mission": "Predict the guards' patrol route",
-    "description": "Identify the order in which guards visit the rooms.",
-    "seed": 12345,
-    "hints": [
-      "Remember the order in which each traversal visits nodes."
-    ]
-  },
-
-  {
-    "levelId": "1.12",
-    "levelName": "Guard not Patrol",
-    "actId": 1,
-    "dataStructure": "AVLTree",
-    "mission": "Predict the Rotations",
-    "description": "Identify the order in which rotations take place.",
-    "seed": 67890,
-    "hints": [
-      "Remember the balance factors."
+      "Every node must exchange its left and right children.",
+      "Make sure the entire tree is mirrored, not just the root."
     ]
   }
 ]

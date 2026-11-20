@@ -1,13 +1,11 @@
 #include <iostream>
-#include "include/game/Campaign.h"
+#include "include/game/MainMenu.h"
 
 using namespace std;
 
 int main()
 {
-	//MainMenu m;
-	//m.startingScreen();
-	Campaign c;
-	c.Act1();
+	MainMenu m;
+	m.startingScreen();
 	return 0;
 }

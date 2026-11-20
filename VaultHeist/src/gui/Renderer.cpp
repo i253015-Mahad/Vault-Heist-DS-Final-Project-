@@ -56,7 +56,7 @@ Renderer* Renderer::parser(Renderer* h, int act)
 				item += line[c];
 				if (item == "levelId")
 				{
-					while (line[c] < '1' || line[c] > '9')
+					while (line[c] < '0' || line[c] > '9')
 						c++;
 					item = "";
 					while (line[c] != '\0')
@@ -66,7 +66,7 @@ Renderer* Renderer::parser(Renderer* h, int act)
 						c++;
 					}
 					c--;
-					curr->levelID = stof(item);
+					curr->levelID = stoi(item);
 				}
 				else if (item == "levelName")
 				{
@@ -85,7 +85,7 @@ Renderer* Renderer::parser(Renderer* h, int act)
 
 				else if (item == "actId")
 				{
-					while (line[c] < '1' || line[c] > '9')
+					while (line[c] < '0' || line[c] > '9')
 						c++;
 					item = "";
 					while (line[c] != '\0')
@@ -145,7 +145,7 @@ Renderer* Renderer::parser(Renderer* h, int act)
 
 				else if (item == "seed")
 				{
-					while (line[c] < '1' || line[c] > '9')
+					while (line[c] < '0' || line[c] > '9')
 						c++;
 					item = "";
 					while (line[c] != '\0')
@@ -157,6 +157,21 @@ Renderer* Renderer::parser(Renderer* h, int act)
 					c--;
 					curr->seed = stoi(item);
 				}
+
+				else if (item == "stars")
+				{
+					while (line[c] < '0' || line[c] > '9')
+						c++;
+					item = "";
+					while (line[c] != '\0')
+					{
+						if (line[c] != ' ' && line[c] != '\"' && line[c] != ',')
+							item += line[c];
+						c++;
+					}
+					c--;
+					curr->stars = stoi(item);
+					}
 
 				else if (item == "hints")
 				{
@@ -182,7 +197,7 @@ Renderer* Renderer::parser(Renderer* h, int act)
 
 				else if (item == "targetKey")
 				{
-					while (line[c] < '1' || line[c] > '9')
+					while (line[c] < '0' || line[c] > '9')
 						c++;
 					item = "";
 					while (line[c] != '\0')
@@ -269,5 +284,77 @@ void Renderer::display(Renderer* h)
 		curr->initalKeys.display();
 		cout << "\n\n";
 		curr = curr->nlevel;
+	}
+}
+
+void Renderer::updateStar(Renderer* curr, int act, int ns)
+{
+	ifstream f;
+	switch (act)
+	{
+	case 1: f.open("VaultHeist/data/levels/Act1.json"); break;
+	case 2: f.open("VaultHeist/data/levels/Act2.json"); break;
+	case 3: f.open("VaultHeist/data/levels/Act3.json"); break;
+	case 4: f.open("VaultHeist/data/levels/Act4.json"); break;
+	}
+	if (!f)
+		return;
+	ofstream t("VaultHeist/data/levels/temp.json");
+	if (!t)
+		return;
+
+	string line, item;
+	int c = 0;
+	bool change = false;
+
+	while (getline(f, line))
+	{
+		c = 0;
+		item = "";
+		while (line[c] != '\0')
+		{
+			if (line[c] != ' ' && line[c] != '\"')
+			{
+				item += line[c];
+				if (item == "levelId")
+				{
+					while (line[c] < '0' || line[c] > '9')
+						c++;
+					item = "";
+					while (line[c] != '\0')
+					{
+						if (line[c] != ' ' && line[c] != '\"' && line[c] != ',')
+							item += line[c];
+						c++;
+					}
+					c--;
+					if (item == to_string(curr->levelID))
+					{
+						cout << "Good\n";
+						change = true;
+					}
+				}
+				else if (item == "stars" && change)
+				{
+					while (line[c] < '0' || line[c] > '9')
+						c++;
+					item = "";
+					line[c] = ns + '0';
+					change = false;
+				}
+			}
+			c++;
+		}
+		t << line;
+		t << endl;
+	}
+	f.close();
+	t.close();
+	switch (act)
+	{
+	case 1: remove("VaultHeist/data/levels/Act1.json"); rename("VaultHeist/data/levels/temp.json", "VaultHeist/data/levels/Act1.json"); break;
+	case 2: remove("VaultHeist/data/levels/Act2.json"); rename("VaultHeist/data/levels/temp.json", "VaultHeist/data/levels/Act2.json"); break;
+	case 3: remove("VaultHeist/data/levels/Act3.json"); rename("VaultHeist/data/levels/temp.json", "VaultHeist/data/levels/Act3.json"); break;
+	case 4: remove("VaultHeist/data/levels/Act4.json"); rename("VaultHeist/data/levels/temp.json", "VaultHeist/data/levels/Act4.json"); break;
 	}
 }
