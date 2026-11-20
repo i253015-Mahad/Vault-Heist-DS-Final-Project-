@@ -1,18 +1,229 @@
-{
-  "levelId": "3.2",
-  "levelName": "Manual Repair",
-  "actId": 3,
-  "dataStructure": "AVL",
-  "mission": "Repair the unbalanced vault",
-  "description": "Identify and perform the correct single rotation.",
-  "seed": 34567,
-  "initialKeys": [
-    20,
-    30,
-    40
-  ],
-  "hints": [
-    "Look at the direction of imbalance.",
-    "Identify the pivot before rotating."
-  ]
-}
+[
+  {
+    "levelId": "3.2",
+    "levelName": "Manual Repair",
+    "actId": 3,
+    "dataStructure": "AVL",
+    "mission": "Repair the unbalanced vault",
+    "description": "Identify and perform the correct single rotation.",
+    "seed": 34567,
+    "initialKeys": [
+      20,
+      30,
+      40
+    ],
+    "hints": [
+      "Look at the direction of imbalance.",
+      "Identify the pivot before rotating."
+    ]
+  },
+
+  {
+    "levelId": "3.2",
+    "levelName": "Manual Repair",
+    "actId": 3,
+    "dataStructure": "AVL",
+    "mission": "Repair the unbalanced vault",
+    "description": "Identify and perform the correct single rotation.",
+    "seed": 34567,
+    "initialKeys": [
+      20,
+      30,
+      40
+    ],
+    "hints": [
+      "Look at the direction of imbalance.",
+      "Identify the pivot before rotating."
+    ]
+  },
+
+  {
+    "levelId": "3.2",
+    "levelName": "Manual Repair",
+    "actId": 3,
+    "dataStructure": "AVL",
+    "mission": "Repair the unbalanced vault",
+    "description": "Identify and perform the correct single rotation.",
+    "seed": 34567,
+    "initialKeys": [
+      20,
+      30,
+      40
+    ],
+    "hints": [
+      "Look at the direction of imbalance.",
+      "Identify the pivot before rotating."
+    ]
+  },
+
+  {
+    "levelId": "3.2",
+    "levelName": "Manual Repair",
+    "actId": 3,
+    "dataStructure": "AVL",
+    "mission": "Repair the unbalanced vault",
+    "description": "Identify and perform the correct single rotation.",
+    "seed": 34567,
+    "initialKeys": [
+      20,
+      30,
+      40
+    ],
+    "hints": [
+      "Look at the direction of imbalance.",
+      "Identify the pivot before rotating."
+    ]
+  },
+
+  {
+    "levelId": "3.2",
+    "levelName": "Manual Repair",
+    "actId": 3,
+    "dataStructure": "AVL",
+    "mission": "Repair the unbalanced vault",
+    "description": "Identify and perform the correct single rotation.",
+    "seed": 34567,
+    "initialKeys": [
+      20,
+      30,
+      40
+    ],
+    "hints": [
+      "Look at the direction of imbalance.",
+      "Identify the pivot before rotating."
+    ]
+  },
+
+  {
+    "levelId": "3.2",
+    "levelName": "Manual Repair",
+    "actId": 3,
+    "dataStructure": "AVL",
+    "mission": "Repair the unbalanced vault",
+    "description": "Identify and perform the correct single rotation.",
+    "seed": 34567,
+    "initialKeys": [
+      20,
+      30,
+      40
+    ],
+    "hints": [
+      "Look at the direction of imbalance.",
+      "Identify the pivot before rotating."
+    ]
+  },
+
+  {
+    "levelId": "3.2",
+    "levelName": "Manual Repair",
+    "actId": 3,
+    "dataStructure": "AVL",
+    "mission": "Repair the unbalanced vault",
+    "description": "Identify and perform the correct single rotation.",
+    "seed": 34567,
+    "initialKeys": [
+      20,
+      30,
+      40
+    ],
+    "hints": [
+      "Look at the direction of imbalance.",
+      "Identify the pivot before rotating."
+    ]
+  },
+
+  {
+    "levelId": "3.2",
+    "levelName": "Manual Repair",
+    "actId": 3,
+    "dataStructure": "AVL",
+    "mission": "Repair the unbalanced vault",
+    "description": "Identify and perform the correct single rotation.",
+    "seed": 34567,
+    "initialKeys": [
+      20,
+      30,
+      40
+    ],
+    "hints": [
+      "Look at the direction of imbalance.",
+      "Identify the pivot before rotating."
+    ]
+  },
+
+  {
+    "levelId": "3.2",
+    "levelName": "Manual Repair",
+    "actId": 3,
+    "dataStructure": "AVL",
+    "mission": "Repair the unbalanced vault",
+    "description": "Identify and perform the correct single rotation.",
+    "seed": 34567,
+    "initialKeys": [
+      20,
+      30,
+      40
+    ],
+    "hints": [
+      "Look at the direction of imbalance.",
+      "Identify the pivot before rotating."
+    ]
+  },
+
+  {
+    "levelId": "3.2",
+    "levelName": "Manual Repair",
+    "actId": 3,
+    "dataStructure": "AVL",
+    "mission": "Repair the unbalanced vault",
+    "description": "Identify and perform the correct single rotation.",
+    "seed": 34567,
+    "initialKeys": [
+      20,
+      30,
+      40
+    ],
+    "hints": [
+      "Look at the direction of imbalance.",
+      "Identify the pivot before rotating."
+    ]
+  },
+
+  {
+    "levelId": "3.2",
+    "levelName": "Manual Repair",
+    "actId": 3,
+    "dataStructure": "AVL",
+    "mission": "Repair the unbalanced vault",
+    "description": "Identify and perform the correct single rotation.",
+    "seed": 34567,
+    "initialKeys": [
+      20,
+      30,
+      40
+    ],
+    "hints": [
+      "Look at the direction of imbalance.",
+      "Identify the pivot before rotating."
+    ]
+  },
+
+  {
+    "levelId": "3.2",
+    "levelName": "Manual Repair",
+    "actId": 3,
+    "dataStructure": "AVL",
+    "mission": "Repair the unbalanced vault",
+    "description": "Identify and perform the correct single rotation.",
+    "seed": 34567,
+    "initialKeys": [
+      20,
+      30,
+      40
+    ],
+    "hints": [
+      "Look at the direction of imbalance.",
+      "Identify the pivot before rotating."
+    ]
+  }
+]

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "include/gui/Renderer.h"
+#include "include/game/Campaign.h"
 
 using namespace std;
 
@@ -7,7 +7,7 @@ int main()
 {
 	//MainMenu m;
 	//m.startingScreen();
-	Renderer r;
-	r.parser(2);
+	Campaign c;
+	c.Act1();
 	return 0;
 }

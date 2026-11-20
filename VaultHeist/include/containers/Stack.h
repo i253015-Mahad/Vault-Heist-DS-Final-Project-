@@ -1,3 +1,4 @@
+#pragma once
 #include "DynArray.h"
 
 template <typename S>
