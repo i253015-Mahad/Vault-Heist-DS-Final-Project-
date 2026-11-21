@@ -15,6 +15,7 @@ public:
 	 DynArray<string> hints;
 	 bool completed;
 	 int stars;
+	 string mode;
 	 //for some acts
 	 int targetKey;
 	 DynArray<int> initalKeys;

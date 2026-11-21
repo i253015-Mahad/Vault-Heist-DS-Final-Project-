@@ -1,6 +1,5 @@
 #include <iostream>
-#include "include/game/MainMenu.h"
-#include "include/heap/Heap.h"
+#include "include/game/Campaign.h"
 
 using namespace std;
 
@@ -8,6 +7,7 @@ int main()
 {
 	//MainMenu m;
 	//m.startingScreen();
-	testMaxHeap();
+	Campaign c;
+	c.Act4();
 	return 0;
 }

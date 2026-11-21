@@ -8,6 +8,8 @@ using namespace std;
 MaxHeap::MaxHeap()
 {
 	heap = new int[5];
+	for (int i = 0; i < 5; i++)
+		heap[i] = 0;
     capacity = 5;
     Size = operationCount = 0;
 }
@@ -32,10 +34,6 @@ MaxHeap::MaxHeap(const MaxHeap& other)
 		return;
 	}
 
-	if (heap != nullptr)
-		delete[] heap;
-	heap = nullptr;
-
 	capacity = other.capacity;
 	Size = other.Size;
 	operationCount = other.operationCount;
@@ -59,8 +57,8 @@ void MaxHeap::buildMaxHeap()
 	if (isEmpty())
 		return;
 
-    for (int i = 0; i < Size; i++)
-        siftUp(i);
+	for (int i = Size / 2 - 1; i >= 0; i--)
+		siftDown(i);
 }
 
 // Heap Operations
@@ -70,15 +68,19 @@ void MaxHeap::siftUp(int index)
 	if (isEmpty())
 		return;
 
-	int i = index, j = (i - 1) / 2, temp;
-
-	while (heap[i] > heap[j] && i != 0)
+	int i = index;
+	while (i > 0)
 	{
-		temp = heap[i];
+		int j = (i - 1) / 2;
+		operationCount++;
+		if (heap[i] <= heap[j])
+			break;
+
+		int temp = heap[i];
 		heap[i] = heap[j];
 		heap[j] = temp;
+		operationCount++;
 		i = j;
-		j = (i - 1) / 2;
 	}
 }
 
@@ -91,11 +93,13 @@ void MaxHeap::siftDown(int index)
 
 	while ( j != -9999 && heap[i] < heap[j] && i != Size-1)
 	{
+		operationCount++;
 		temp = heap[i];
 		heap[i] = heap[j];
 		heap[j] = temp;
 		i = j;
 		j = max(2 * i + 1, 2 * i + 2);
+		operationCount++;
 	}
 }
 
@@ -107,6 +111,7 @@ int MaxHeap::extractMax()
 	int temp = heap[0];
 	heap[0] = heap[Size - 1];
 	heap[Size - 1] = temp;
+	operationCount++;
 	Size--;
 	siftDown(0);
 	return heap[Size];
@@ -119,6 +124,7 @@ void MaxHeap::heapSort()
 	if (isEmpty() || !isMaxHeap())
 		return;
 
+	buildMaxHeap();
 	int i = Size;
 	while (Size != 0)
 		extractMax();
@@ -181,16 +187,16 @@ int MaxHeap::getMax() const { return (isEmpty()) ? -9999 : heap[0]; }
 int MaxHeap::getSize() const { return Size; }
 int MaxHeap::getCapacity() const { return capacity; }
 int MaxHeap::getOperationCount() const { return operationCount; }
-int MaxHeap::getElement(int index) const { return (index > Size - 1) ? -9999 : heap[index]; }
+int MaxHeap::getElement(int index) const { return (heap == nullptr || index < 0 || index >= capacity) ? -9999 : heap[index]; }
 int MaxHeap::max(int a, int b) const
 {
-	if (a > Size - 1 && b > Size - 1)
+	if (a >= Size && b >= Size)
 		return -9999;
-
-	if (a >= Size || (heap[a] < heap[b] && b < Size ))
-		return b;
-	else if (b >= Size || (heap[a] > heap[b] && a < Size))
+	else if (b >= Size)
 		return a;
+	else if (a >= Size)
+		return b;
+	return (heap[a] >= heap[b]) ? a : b;
 }
 
 // Setters
@@ -214,6 +220,8 @@ void MaxHeap::setElement(int index, int value)
 }
 
 void MaxHeap::resetOperationCount() { operationCount = 0; }
+
+void MaxHeap::setSize(int newSize) { Size = newSize; }
 
 // working
 

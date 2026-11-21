@@ -8,6 +8,7 @@
     "description": "Build a Max Heap using bottom-up swaps.",
     "seed": 41345,
     "stars": 0,
+    "mode": "Build",
     "hints": [
       "A Max Heap is a complete binary tree.",
       "Every parent must be greater than or equal to its children.",
@@ -23,6 +24,7 @@
     "description": "Restore the Max Heap using sift operations.",
     "seed": 42345,
     "stars": 0,
+    "mode": "Repair",
     "hints": [
       "Sift-up is used when a node may be larger than its parent.",
       "Sift-down is used when a parent may be smaller than its children.",
@@ -38,6 +40,7 @@
     "description": "Extract maximum values and sort the heap.",
     "seed": 43345,
     "stars": 0,
+    "mode": "Extract",
     "hints": [
       "The root always contains the maximum value.",
       "Swap the root with the last element in the active heap.",
@@ -53,6 +56,7 @@
     "description": "Sort the heap by extracting maximum values.",
     "seed": 44345,
     "stars": 0,
+    "mode": "Race",
     "hints": [
       "Build a Max Heap before starting extraction.",
       "Each extraction places the current maximum in its final sorted position.",
@@ -68,6 +72,7 @@
     "description": "Build a Max Heap and sort the array to unlock the vault.",
     "seed": 45345,
     "stars": 0,
+    "mode": "Boss",
     "hints": [
       "First convert the array into a Max Heap.",
       "Repeatedly move the maximum element to the end.",

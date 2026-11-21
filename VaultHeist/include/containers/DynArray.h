@@ -157,7 +157,7 @@ bool DynArray<T>::popBack()
 template <typename T>
 T DynArray<T>::get(int i)
 {
-	T x = 0;
+	T x{};
 	if (i < 0 || i >= Size)
 		return x;
 

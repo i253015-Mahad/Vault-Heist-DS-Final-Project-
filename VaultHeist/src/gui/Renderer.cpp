@@ -171,7 +171,22 @@ Renderer* Renderer::parser(Renderer* h, int act)
 					}
 					c--;
 					curr->stars = stoi(item);
+				}
+
+				else if (item == "mode")
+				{
+					while (line[c] < 'A' || line[c] > 'Z')
+						c++;
+					item = "";
+					while (line[c] != '\0')
+					{
+						if (line[c] != '\"' && line[c] != ',')
+							item += line[c];
+						c++;
 					}
+					c--;
+					curr->mode = item;
+				}
 
 				else if (item == "hints")
 				{

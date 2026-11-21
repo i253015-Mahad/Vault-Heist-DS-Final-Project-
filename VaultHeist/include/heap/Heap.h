@@ -44,6 +44,7 @@ public:
     void insert(int value);
     void setElement(int index, int value);
     void resetOperationCount();
+    void setSize(int newSize);
 
     // working
     void swapElements(int i, int j);
